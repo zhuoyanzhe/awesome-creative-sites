@@ -23,8 +23,6 @@
 
 - [Dustin Brett](https://dustinbrett.com/) — daedalOS，完整还原桌面操作系统交互的网页应用，窗口、文件系统、应用商店一应俱全。
 
-**收录标准**：在创意 / 交互 / 视觉 / 技术任意一方面有明显亮点。
-
 
 ## License
 
