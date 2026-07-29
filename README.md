@@ -6,7 +6,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**🔗 [在线画廊 →](https://YOUR_USERNAME.github.io/awesome-creative-sites/)**（把目录收录成了一个网站）
+**🔗 [在线画廊 →](https://icepage.github.io/awesome-creative-sites/)**（把目录收录成了一个网站）
 
 ---
 
