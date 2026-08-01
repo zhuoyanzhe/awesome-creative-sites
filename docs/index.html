@@ -10,26 +10,27 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0a0a0d;
-    --bg-card: #131318;
-    --bg-card-hover: #17171d;
-    --line: #2a2a31;
-    --line-soft: #1c1c22;
-    --text: #ece9e2;
-    --text-muted: #8a8a93;
-    --amber: #ffb000;
-    --teal: #5ec8c0;
+    --bg: #f3f1ec;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fbf9f4;
+    --line: #e2ded3;
+    --line-soft: #ebe7dd;
+    --text: #18181b;
+    --text-muted: #6b6b70;
+    --amber: #b8720a;
+    --amber-soft: #f2e2c8;
+    --teal: #1a8a80;
+    --teal-soft: #dcf0ec;
   }
 
   *{ box-sizing: border-box; }
-
   html{ scroll-behavior: smooth; }
 
   body{
     margin:0;
     background:
-      radial-gradient(1200px 600px at 15% -10%, rgba(255,176,0,0.06), transparent 60%),
-      radial-gradient(1000px 500px at 100% 0%, rgba(94,200,192,0.05), transparent 60%),
+      radial-gradient(1200px 600px at 15% -10%, rgba(184,114,10,0.07), transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, rgba(26,138,128,0.06), transparent 60%),
       var(--bg);
     color: var(--text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -37,290 +38,139 @@
   }
 
   code, .mono{ font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace; }
-
   a{ color: inherit; }
-
-  ::selection{ background: var(--amber); color: #0a0a0d; }
-
-  :focus-visible{
-    outline: 2px solid var(--amber);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
+  ::selection{ background: var(--amber); color: #fff; }
+  :focus-visible{ outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
 
   /* ---------- top bar ---------- */
   .topbar{
     border-bottom: 1px solid var(--line-soft);
     padding: 14px 24px;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    position: sticky;
-    top:0;
-    background: rgba(10,10,13,0.85);
+    display:flex; align-items:center; justify-content: space-between;
+    position: sticky; top:0;
+    background: rgba(243,241,236,0.85);
     backdrop-filter: blur(8px);
     z-index: 20;
   }
   .topbar-left{ display:flex; align-items:center; gap:10px; }
   .dots{ display:flex; gap:6px; }
-  .dots span{
-    width:8px; height:8px; border-radius:2px;
-    background: var(--line);
-  }
-  .dots span:nth-child(1){ background:#ff5f56aa; }
-  .dots span:nth-child(2){ background:#ffbd2eaa; }
-  .dots span:nth-child(3){ background:#27c93faa; }
+  .dots span{ width:8px; height:8px; border-radius:2px; }
+  .dots span:nth-child(1){ background:#e0634f; }
+  .dots span:nth-child(2){ background:var(--amber); }
+  .dots span:nth-child(3){ background:var(--teal); }
   .topbar-title{ font-size:13px; color: var(--text-muted); letter-spacing:.02em; }
   .topbar-title b{ color: var(--text); font-weight:500; }
   .topbar a.gh{
-    font-size:13px;
-    color: var(--text-muted);
-    text-decoration:none;
-    border:1px solid var(--line);
-    padding:6px 12px;
-    border-radius:6px;
+    font-size:13px; color: var(--text-muted); text-decoration:none;
+    border:1px solid var(--line); padding:6px 12px; border-radius:6px;
     transition: border-color .15s, color .15s;
   }
   .topbar a.gh:hover{ color: var(--text); border-color: var(--teal); }
 
   /* ---------- hero ---------- */
-  .hero{
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 72px 24px 40px;
-  }
+  .hero{ max-width: 980px; margin: 0 auto; padding: 72px 24px 40px; }
   .eyebrow{
-    font-size:12px;
-    color: var(--amber);
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-    display:flex;
-    align-items:center;
-    gap:10px;
+    font-size:12px; color: var(--amber); letter-spacing: .12em; text-transform: uppercase;
+    margin-bottom: 18px; display:flex; align-items:center; gap:10px;
   }
-  .eyebrow::before{
-    content:"";
-    width: 18px; height:1px;
-    background: var(--amber);
-    display:inline-block;
-  }
+  .eyebrow::before{ content:""; width: 18px; height:1px; background: var(--amber); display:inline-block; }
   h1{
-    font-size: clamp(32px, 5vw, 52px);
-    line-height: 1.1;
-    margin: 0 0 18px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 18px;
+    font-weight: 600; letter-spacing: -0.02em;
   }
   h1 .cursor{
-    display:inline-block;
-    width: 0.5em;
-    background: var(--amber);
-    margin-left: 4px;
+    display:inline-block; width: 0.5em; background: var(--amber); margin-left: 4px;
     animation: blink 1.1s steps(1) infinite;
   }
   @keyframes blink{ 50%{ opacity:0; } }
 
-  .hero p.lead{
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-muted);
-    max-width: 620px;
-    margin: 0 0 28px;
-  }
-  .hero p.lead code{
-    color: var(--teal);
-    background: var(--bg-card);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 13px;
-  }
+  .hero p.lead{ font-size: 16px; line-height: 1.7; color: var(--text-muted); max-width: 620px; margin: 0 0 28px; }
+  .hero p.lead code{ color: var(--teal); background: var(--teal-soft); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
 
-  .stats{
-    display:flex;
-    gap: 28px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
+  .stats{ display:flex; gap: 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); }
   .stats b{ color: var(--text); font-weight:600; }
 
   /* ---------- controls ---------- */
-  .controls{
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0 24px 28px;
-    display:flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items:center;
-  }
+  .controls{ max-width: 980px; margin: 0 auto; padding: 0 24px 28px; display:flex; flex-wrap: wrap; gap: 10px; align-items:center; }
   .search{
-    flex: 1 1 240px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    background: var(--bg-card);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 10px 14px;
+    flex: 1 1 240px; display:flex; align-items:center; gap:8px;
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px;
   }
-  .search::before{
-    content: "grep -i";
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--teal);
-  }
+  .search::before{ content: "grep -i"; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--teal); }
   .search input{
-    flex:1;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--text);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    flex:1; background: transparent; border: none; outline: none; color: var(--text);
+    font-family: 'JetBrains Mono', monospace; font-size: 13px;
   }
-  .search input::placeholder{ color: #55555f; }
+  .search input::placeholder{ color: #a8a49a; }
 
   .tags{ display:flex; flex-wrap: wrap; gap:8px; }
   .tag-btn{
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    background: transparent;
-    color: var(--text-muted);
-    border: 1px solid var(--line);
-    padding: 8px 12px;
-    border-radius: 999px;
-    cursor:pointer;
-    transition: all .15s;
-    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--bg-card); color: var(--text-muted);
+    border: 1px solid var(--line); padding: 8px 12px; border-radius: 999px; cursor:pointer;
+    transition: all .15s; white-space: nowrap;
   }
   .tag-btn:hover{ border-color: var(--teal); color: var(--text); }
-  .tag-btn.active{
-    background: var(--amber);
-    border-color: var(--amber);
-    color: #14140f;
-    font-weight: 500;
-  }
+  .tag-btn.active{ background: var(--amber); border-color: var(--amber); color: #fff; font-weight: 500; }
 
   /* ---------- grid ---------- */
   .grid{
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 8px 24px 100px;
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 18px;
+    max-width: 980px; margin: 0 auto; padding: 8px 24px 100px;
+    display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px;
   }
 
   .card{
-    background: var(--bg-card);
-    border: 1px solid var(--line-soft);
-    border-radius: 12px;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    text-decoration:none;
-    color: var(--text);
-    transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    background: var(--bg-card); border: 1px solid var(--line-soft); border-radius: 12px;
+    overflow: hidden; display:flex; flex-direction: column; text-decoration:none; color: var(--text);
+    box-shadow: 0 1px 2px rgba(20,20,20,0.03);
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
   }
   .card:hover{
     transform: translateY(-3px);
     border-color: var(--amber);
-    background: var(--bg-card-hover);
+    box-shadow: 0 10px 24px rgba(184,114,10,0.12);
   }
   .card:hover .cover .go{ opacity:1; transform: translateX(0); }
 
-  .cover{
-    position:relative;
-    height: 132px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+  .cover{ position:relative; height: 140px; overflow:hidden; }
+  .cover .fallback{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
   }
-  .cover .glyph{
-    font-family:'JetBrains Mono', monospace;
-    font-weight:700;
-    font-size: 46px;
-    color: rgba(255,255,255,0.14);
-    letter-spacing: -1px;
+  .cover .glyph{ font-family:'JetBrains Mono', monospace; font-weight:700; font-size: 46px; color: rgba(0,0,0,0.12); letter-spacing: -1px; }
+  .cover .thumb{
+    position:absolute; inset:0; width:100%; height:100%; object-fit: cover; object-position: top;
+    display:block;
   }
   .cover .go{
-    position:absolute;
-    right:12px; bottom:10px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: #fff;
-    background: rgba(0,0,0,0.35);
-    padding: 4px 8px;
-    border-radius: 999px;
-    opacity:0;
-    transform: translateX(6px);
-    transition: all .18s;
+    position:absolute; right:12px; bottom:10px; font-family:'JetBrains Mono', monospace; font-size: 11px;
+    color: #fff; background: rgba(0,0,0,0.45); padding: 4px 8px; border-radius: 999px;
+    opacity:0; transform: translateX(6px); transition: all .18s; z-index: 2;
   }
   .cover .num{
-    position:absolute;
-    left:12px; top:10px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
-    background: rgba(0,0,0,0.3);
-    padding: 3px 7px;
-    border-radius: 4px;
+    position:absolute; left:12px; top:10px; font-family:'JetBrains Mono', monospace; font-size: 11px;
+    color: #fff; background: rgba(0,0,0,0.4); padding: 3px 7px; border-radius: 4px; z-index: 2;
   }
 
-  .body{
-    padding: 16px;
-    display:flex;
-    flex-direction:column;
-    gap: 10px;
-    flex:1;
-  }
+  .body{ padding: 16px; display:flex; flex-direction:column; gap: 10px; flex:1; }
   .title-row{ display:flex; align-items:center; gap:8px; }
   .favicon{ width:16px; height:16px; border-radius:3px; flex-shrink:0; }
   .card h3{ margin:0; font-size: 15px; font-weight: 600; }
-  .domain{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--teal);
-    margin: -6px 0 0;
-  }
-  .desc{
-    font-size: 13px;
-    line-height: 1.55;
-    color: var(--text-muted);
-    margin:0;
-    flex:1;
-  }
+  .domain{ font-family:'JetBrains Mono', monospace; font-size: 11px; color: var(--teal); margin: -6px 0 0; }
+  .desc{ font-size: 13px; line-height: 1.55; color: var(--text-muted); margin:0; flex:1; }
   .chips{ display:flex; flex-wrap:wrap; gap:6px; }
   .chip{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--text-muted);
-    border: 1px solid var(--line);
-    padding: 3px 8px;
-    border-radius: 999px;
+    font-family:'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted);
+    border: 1px solid var(--line); padding: 3px 8px; border-radius: 999px; background: var(--bg);
   }
 
   .empty{
-    max-width: 980px;
-    margin: 60px auto;
-    text-align:center;
-    color: var(--text-muted);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    display:none;
+    max-width: 980px; margin: 60px auto; text-align:center; color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; display:none;
   }
   .empty.show{ display:block; }
 
   footer{
-    border-top: 1px solid var(--line-soft);
-    padding: 28px 24px 60px;
-    text-align:center;
-    color: var(--text-muted);
-    font-size: 12px;
-    font-family:'JetBrains Mono', monospace;
+    border-top: 1px solid var(--line-soft); padding: 28px 24px 60px; text-align:center;
+    color: var(--text-muted); font-size: 12px; font-family:'JetBrains Mono', monospace;
   }
   footer a{ color: var(--teal); text-decoration:none; }
   footer a:hover{ text-decoration:underline; }
@@ -346,13 +196,13 @@
     <h1>还有人在认真做<br>好玩的网站<span class="cursor">&nbsp;</span></h1>
     <p class="lead">
       这是一份持续更新、人工筛选的创意网站目录 —— 3D 交互、复古操作系统模拟、
-      实验性排版、单页脑洞……每一条都是有人熬夜手搓出来的东西。
+      像素长卷、实验性排版……每一条都是有人熬夜手搓出来的东西。
       用 <code>Ctrl/Cmd + F</code> 或者下面的标签来找找看。
     </p>
     <div class="stats">
       <span><b id="stat-count">0</b> 个网站</span>
       <span><b id="stat-tags">0</b> 个分类</span>
-      <span>最近更新 <b>2026-07-29</b></span>
+      <span>最近更新 <b>2026-07-31</b></span>
     </div>
   </section>
 
@@ -367,25 +217,14 @@
   <p class="empty" id="empty">$ 未找到匹配结果 — 试试换个关键词，或者去 issue 里推荐一个？</p>
 
   <footer>
-    喜欢的网站不在列表里？<a href="https://github.com/zhuoyanzhe/awesome-creative-sites/issues/new?template=add-site.md" target="_blank" rel="noopener">提交 Issue 添加它</a>
+    喜欢的网站不在列表里？<a href="https://github.com/zhuoyanzhe/awesome-creative-sites/issues/new" target="_blank" rel="noopener">提交 Issue 添加它</a>
     &nbsp;·&nbsp; MIT License
   </footer>
 
+<!-- 网站数据独立放在 sites.js 里，加新网站改那个文件就行，不用碰这里 -->
+<script src="sites.js"></script>
 <script>
-  const SITES = [
-    {
-      name: "ITom Dev",
-      url: "https://itomdev.com/",
-      desc: "手绘风格的沉浸式 3D 开发者作品集，用 React Three Fiber + GSAP 打造了一条可以走进去的 WebGL 走廊。",
-      tags: ["3D / WebGL", "作品集", "动效"]
-    },
-    {
-      name: "Dustin Brett",
-      url: "https://dustinbrett.com/",
-      desc: "daedalOS —— 一个完整还原桌面操作系统交互的网页应用，窗口、文件系统、应用商店一应俱全。",
-      tags: ["模拟 OS", "工程向", "交互"]
-    }
-  ];
+  // SITES 数组来自上面引入的 sites.js（全局变量）
 
   const grid = document.getElementById('grid');
   const tagsWrap = document.getElementById('tags');
@@ -422,14 +261,18 @@
       return matchesTag && matchesQuery;
     });
 
-    grid.innerHTML = filtered.map((s, i) => {
+    grid.innerHTML = filtered.map((s) => {
       const hue = hueFromString(s.name);
       const idx = String(SITES.indexOf(s) + 1).padStart(3, '0');
+      const hasImg = s.img && s.img.trim() !== '';
       return `
       <a class="card" href="${s.url}" target="_blank" rel="noopener">
-        <div class="cover" style="background: linear-gradient(135deg, hsl(${hue} 55% 14%), hsl(${(hue+40)%360} 55% 9%));">
+        <div class="cover">
+          <div class="fallback" style="background: linear-gradient(135deg, hsl(${hue} 60% 92%), hsl(${(hue+40)%360} 60% 86%));">
+            <span class="glyph">${s.name.slice(0,1).toUpperCase()}</span>
+          </div>
+          ${hasImg ? `<img class="thumb" src="${s.img}" alt="${s.name} 缩略图" loading="lazy" onerror="this.remove()">` : ''}
           <span class="num mono">№ ${idx}</span>
-          <span class="glyph">${s.name.slice(0,1).toUpperCase()}</span>
           <span class="go mono">访问 →</span>
         </div>
         <div class="body">

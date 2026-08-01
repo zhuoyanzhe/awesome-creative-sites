@@ -11,18 +11,23 @@
 ---
 
 ## 目录
-
+ 
 - [3D / WebGL](#3d--webgl)
 - [复古 & 系统模拟](#复古--系统模拟)
+- [像素艺术 / 长期项目](#像素艺术)
 
 ## 3D / WebGL
-
+ 
 - [ITom Dev](https://itomdev.com/) — 手绘风格的沉浸式 3D 开发者作品集，用 React Three Fiber + GSAP 打造了一条可以走进去的 WebGL 走廊。
+- [Bruno Simon](https://bruno-simon.com/) — 开着一辆 3D 小车在自己的作品集里到处飙车撞广告牌，创意编程圈公认的教科书级案例。
 
 ## 复古 & 系统模拟
-
+ 
 - [Dustin Brett](https://dustinbrett.com/) — daedalOS，完整还原桌面操作系统交互的网页应用，窗口、文件系统、应用商店一应俱全。
-
+- [Henry Heffernan](https://henryheffernan.com/) — 90 年代怀旧桌面风格的作品集，用 React + Three.js 搭出一台可以点开窗口、拖拽图标的复古电脑。
+## 像素艺术
+ 
+- [Floor796](https://floor796.com/#wandering) — 一幅永远在生长的像素画长卷，整栋建筑里塞满了可点击的动画彩蛋和流行文化梗，像素版《威利在哪里》。
 
 ## License
 
