@@ -15,36 +15,36 @@ const SITES = [
   {
     name: "ITom Dev",
     url: "https://itomdev.com/",
-    img: "img/itomdev.jpg",
+    img: "img/itomdev.com.jpg",
     desc: "手绘风格的沉浸式 3D 开发者作品集，用 React Three Fiber + GSAP 打造了一条可以走进去的 WebGL 走廊。",
     tags: ["3D / WebGL", "作品集", "动效"]
   },
   {
     name: "Dustin Brett",
     url: "https://dustinbrett.com/",
-    img: "img/dustinbrett.jpg",
+    img: "img/dustinbrett.com.jpg",
     desc: "daedalOS —— 一个完整还原桌面操作系统交互的网页应用，窗口、文件系统、应用商店一应俱全。",
     tags: ["模拟 OS", "工程向", "交互"]
   },
   {
     name: "Floor796",
     url: "https://floor796.com/#wandering",
-    img: "img/floor796.jpg",
+    img: "img/floor796.com.jpg",
     desc: "一幅永远在生长的像素画长卷，整栋建筑里塞满了可点击的动画彩蛋和流行文化梗，像素版《威利在哪里》。",
     tags: ["像素艺术", "彩蛋", "长期项目"]
   },
   {
     name: "Henry Heffernan",
     url: "https://henryheffernan.com/",
-    img: "img/henryheffernan.jpg",
+    img: "img/henryheffernan.com.jpg",
     desc: "90 年代怀旧桌面风格的作品集，用 React + Three.js 搭出一台可以点开窗口、拖拽图标的复古电脑。",
     tags: ["模拟 OS", "3D / WebGL", "作品集"]
   },
   {
     name: "Bruno Simon",
     url: "https://bruno-simon.com/",
-    img: "img/bruno-simon.jpg",
+    img: "img/bruno-simon.com.jpg",
     desc: "开着一辆 3D 小车在自己的作品集里到处飙车撞广告牌——创意编程圈公认的教科书级案例。",
     tags: ["3D / WebGL", "作品集", "游戏化"]
-  }
+  },
 ];
