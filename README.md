@@ -25,6 +25,7 @@
 - [Bruno Simon](https://bruno-simon.com/) — 开着一辆 3D 小车在自己的作品集里到处飙车撞广告牌，创意编程圈公认的教科书级案例。
 - [Akari](https://akari.lusion.co/) — Lusion 工作室的 2D 光线追踪实验，用跳泛洪算法在浏览器里实时算光影，还藏了几个用光子玩的小游戏。
 - [Jesse's Ramen](https://www.jesse-zhou.com/) — 把个人作品集做成一家可以走进去逛的 3D 拉面店，Three.js 手搓，拿过 Awwwards 荣誉提名。
+- [StagePeek](https://stagepeek.live/) — 覆盖全球 201 座演唱会场馆的 2D 座位图与 3D WebGL 舞台视野模拟器，支持 1x–10x 手机变焦预览（免登录免费体验）。
 ## 复古 & 系统模拟
  
 - [Dustin Brett](https://dustinbrett.com/) — daedalOS，完整还原桌面操作系统交互的网页应用，窗口、文件系统、应用商店一应俱全。
